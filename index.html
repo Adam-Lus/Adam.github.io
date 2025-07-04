@@ -50,10 +50,19 @@
               开始游戏 <i class="fa fa-arrow-right ml-2"></i>
             </button>
           </div>
+          <!-- 猜数字游戏卡片 -->
+          <div class="feature-card game-feature-card">
+            <i class="fa fa-question-circle"></i>
+            <h3>猜数字</h3>
+            <p>猜猜我心里想的数字</p>
+            <button id="start-guess-game-btn" class="game-btn mt-4">
+              开始游戏 <i class="fa fa-arrow-right ml-2"></i>
+            </button>
+          </div>
         </div>
       </div>
 
-      <!-- 游戏模态框（添加完整内容） -->
+      <!-- 问答游戏模态框（添加完整内容） -->
       <div id="game-modal" class="game-modal hidden">
         <!-- 新增显示提示信息的元素 -->
         <div id="game-message" class="game-message"></div>
@@ -63,6 +72,16 @@
             <button id="like-btn" class="option-btn like-btn">喜欢</button>
             <button id="dislike-btn" class="option-btn dislike-btn">不喜欢</button>
           </div>
+        </div>
+      </div>
+
+      <!-- 猜数字游戏模态框 -->
+      <div id="guess-game-modal" class="game-modal hidden">
+        <div class="game-modal-content">
+          <h4 class="game-question">我心里想了一个1 - 100的数字，猜猜看是多少？</h4>
+          <input type="number" id="guess-input" min="1" max="100" placeholder="输入你的猜测">
+          <button id="guess-submit-btn" class="option-btn like-btn">提交</button>
+          <p id="guess-result"></p>
         </div>
       </div>
 
@@ -86,7 +105,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 刘莹！满足我吧！.</p>
+      <p>&copy; 刘莹宝宝满足我吧（夹带私活）.</p>
       <div class="social-links">
         <a href="#"><i class="fa fa-weibo"></i></a>
         <a href="#"><i class="fa fa-wechat"></i></a>
