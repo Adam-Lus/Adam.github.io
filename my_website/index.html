@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的网站</title>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 导航栏 -->
+  <header>
+    <nav>
+      <div class="container">
+        <a href="#" class="logo">路山的网站</a>
+        <ul class="nav-links">
+          <li><a href="#home">首页</a></li>
+          <li><a href="#features">功能</a></li>
+          <li><a href="#contact">联系</a></li>
+        </ul>
+        <button class="mobile-menu-button">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 主内容区 -->
+  <main>
+    <!-- 英雄区域 -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>欢迎来到路山的网站</h1>
+        <p>这是一个专门为了刘莹制作的网站</p>
+        <a href="#features" class="btn">了解更多</a>
+      </div>
+    </section>
+
+    <!-- 功能展示区（修复嵌套错误） -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2>网站功能</h2>
+        <div class="feature-cards">
+          <!-- 游戏功能卡片 -->
+          <div class="feature-card game-feature-card">
+            <i class="fa fa-gamepad"></i>
+            <h3>问答</h3>
+            <p>给刘莹做的小游戏</p>
+            <button id="start-game-btn" class="game-btn mt-4">
+              开始游戏 <i class="fa fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 游戏模态框（添加完整内容） -->
+      <div id="game-modal" class="game-modal hidden">
+        <!-- 新增显示提示信息的元素 -->
+        <div id="game-message" class="game-message"></div>
+        <div class="game-modal-content">
+          <h4 class="game-question text-3xl font-bold mb-8 text-gray-800">喜欢我吗？</h4>
+          <div class="game-options flex justify-center space-x-6">
+            <button id="like-btn" class="option-btn like-btn">喜欢</button>
+            <button id="dislike-btn" class="option-btn dislike-btn">不喜欢</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 玫瑰花容器 -->
+      <div id="rose-container" class="fixed inset-0 pointer-events-none z-40 hidden"></div>
+    </section>
+
+    <!-- 联系表单 -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>联系我们</h2>
+        <form>
+          <input type="text" placeholder="您的姓名">
+          <input type="email" placeholder="您的邮箱">
+          <textarea placeholder="您的留言"></textarea>
+          <button type="submit">发送</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 我的网站. 保留所有权利.</p>
+      <div class="social-links">
+        <a href="#"><i class="fa fa-weibo"></i></a>
+        <a href="#"><i class="fa fa-wechat"></i></a>
+        <a href="#"><i class="fa fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
