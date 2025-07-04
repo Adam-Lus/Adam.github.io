@@ -446,3 +446,25 @@ footer {
   justify-content: space-between;
   align-items: center;
 }
+/* 猜数字游戏模态框样式 */
+#guess-game-modal .game-modal-content {
+    text-align: center; /* 让内容居中 */
+}
+
+#guess-game-modal input,
+#guess-game-modal button {
+    display: block; /* 让元素以块级元素显示 */
+    margin: 10px auto; /* 上下边距为 10px，左右自动居中 */
+}
+
+
+/* 添加抖动动画 */
+@keyframes shake-guess {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.shake-guess {
+  animation: shake-guess 0.5s ease-in-out;
+}
