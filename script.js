@@ -100,7 +100,7 @@ if (startGameBtn && gameModal && likeBtn && dislikeBtn && roseContainer && gameM
         gameModal.classList.remove('active');
     }
 
- // 喜欢按钮点击事件
+    // 喜欢按钮点击事件
     likeBtn.addEventListener('click', () => {
         console.log('点击了喜欢按钮');
         createRoses();
@@ -181,6 +181,55 @@ if (startGameBtn && gameModal && likeBtn && dislikeBtn && roseContainer && gameM
             }, i * 60);
         }
     }
+}
+
+// 猜数字游戏逻辑
+const startGuessGameBtn = document.getElementById('start-guess-game-btn');
+const guessGameModal = document.getElementById('guess-game-modal');
+const guessInput = document.getElementById('guess-input');
+const guessSubmitBtn = document.getElementById('guess-submit-btn');
+const guessResult = document.getElementById('guess-result');
+
+if (startGuessGameBtn && guessGameModal && guessInput && guessSubmitBtn && guessResult) {
+    let secretNumber;
+
+    // 打开猜数字游戏
+    startGuessGameBtn.addEventListener('click', () => {
+        guessGameModal.classList.add('active');
+        secretNumber = Math.floor(Math.random() * 100) + 1;
+        guessInput.value = '';
+        guessResult.textContent = '';
+    });
+
+    // 关闭猜数字游戏
+    function closeGuessGame() {
+        guessGameModal.classList.remove('active');
+    }
+
+    // 提交猜测
+    guessSubmitBtn.addEventListener('click', () => {
+        const guess = parseInt(guessInput.value);
+        if (isNaN(guess) || guess < 1 || guess > 100) {
+            guessResult.textContent = '请输入1 - 100之间的数字哦~';
+        } else if (guess < secretNumber) {
+            guessResult.textContent = '小了那宝贝，再试试！';
+            guessInput.classList.add('shake-guess');
+            setTimeout(() => {
+                guessInput.classList.remove('shake-guess');
+            }, 500);
+        } else if (guess > secretNumber) {
+            guessResult.textContent = '大了那宝贝，再试试！';
+            guessInput.classList.add('shake-guess');
+            setTimeout(() => {
+                guessInput.classList.remove('shake-guess');
+            }, 500);
+        } else {
+            guessResult.textContent = '猜对啦，宝贝真棒！🎉';
+            setTimeout(() => {
+                closeGuessGame();
+            }, 3000);
+        }
+    });
 }
 
 // 通用提示消息功能（全局可用）
