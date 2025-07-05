@@ -267,6 +267,7 @@ window.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.add('hidden');
     }
 });
+
 // 获取音频元素、按钮元素和音乐选择下拉框
 const bgm = document.getElementById('bgm');
 const bgmToggle = document.createElement('button'); // 创建新按钮
@@ -305,7 +306,6 @@ if (bgm && musicSelect) {
         bgmToggle.innerHTML = '<i class="fa fa-pause"></i>'; // 切换为暂停图标
     });
 }
-
 
 // 拼图游戏逻辑
 const startPuzzleBtn = document.getElementById('start-puzzle-btn');
@@ -403,6 +403,7 @@ function initPuzzle() {
         puzzleTiles.push(tile);
     });
 }
+
 // 自动复原拼图
 function autoSolvePuzzle() {
     // 目标状态
@@ -513,6 +514,7 @@ function getNeighbors(state, emptyIndex) {
     }
     return neighbors;
 }
+
 // 获取自动复原按钮
 const autoSolvePuzzleBtn = puzzleModal.querySelector('#auto-solve-puzzle');
 
@@ -520,6 +522,7 @@ const autoSolvePuzzleBtn = puzzleModal.querySelector('#auto-solve-puzzle');
 if (autoSolvePuzzleBtn) {
     autoSolvePuzzleBtn.addEventListener('click', autoSolvePuzzle);
 }
+
 // 设置容器样式
 function setContainerStyle() {
     // 获取容器宽度，计算合适的瓦片大小
@@ -577,6 +580,7 @@ function swapTiles(index1, index2) {
         }
     });
 }
+
 // 检查拼图是否完成
 function isPuzzleComplete() {
     for (let i = 0; i < 8; i++) {
@@ -735,4 +739,13 @@ puzzleModal.addEventListener('click', (e) => {
 // 重置拼图
 if (resetPuzzleBtn) {
     resetPuzzleBtn.addEventListener('click', initPuzzle);
+}
+
+// 页面加载时设置默认音乐
+if (bgm && musicSelect) {
+    const defaultMusic = musicSelect.options[0].value;
+    bgm.src = defaultMusic;
+    bgm.play();
+    bgm.muted = false;
+    bgmToggle.innerHTML = '<i class="fa fa-pause"></i>'; // 切换为暂停图标
 }
