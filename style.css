@@ -636,3 +636,17 @@ footer {
     grid-template-columns: 1fr; /* 小屏幕单列 */
   }
 }
+.close-modal {
+    position: relative;
+    top: -130px;
+    left: 5px;
+    font-size: 60px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    z-index: 1001; /* 确保按钮在模态框内容之上 */
+}
+
+.close-modal:hover {
+    color: #165DFF;
+}
