@@ -342,11 +342,20 @@ let moves = 0;
 let tileSize = 100; // 默认瓦片大小
 let isGameCompleted = false; // 新增：游戏是否完成的标记
 
-// 拼图图片配置
-const puzzleImage = 'images/rose.png'; // 替换为你自己图片的文件名
+// 拼图图片配置，定义多个图片路径
+const puzzleImages = [
+  'images/rose.png', // 替换为你自己图片的文件名
+  'images/puzzle1.jpg', // 添加更多图片路径
+  'images/puzzle2.jpg','images/puzzle3.jpg','images/puzzle4.jpg'
+  // 可以继续添加更多图片
+];
 
 // 初始化拼图游戏
 function initPuzzle() {
+    // 随机选择一张图片作为当前的拼图图片
+    const randomIndex = Math.floor(Math.random() * puzzleImages.length);
+    const puzzleImage = puzzleImages[randomIndex];
+
     // 设置容器样式
     setContainerStyle();
 
@@ -735,6 +744,10 @@ puzzleModal.addEventListener('click', (e) => {
         puzzleModal.classList.remove('active');
     }
 });
+// 关闭拼图游戏
+function closePuzzleGame() {
+    puzzleModal.classList.remove('active');
+}
 
 // 重置拼图
 if (resetPuzzleBtn) {
@@ -749,3 +762,13 @@ if (bgm && musicSelect) {
     bgm.muted = false;
     bgmToggle.innerHTML = '<i class="fa fa-pause"></i>'; // 切换为暂停图标
 }
+// 获取所有关闭按钮
+const closeModals = document.querySelectorAll('.close-modal');
+
+// 为每个关闭按钮添加点击事件
+closeModals.forEach(closeModal => {
+    closeModal.addEventListener('click', () => {
+        const modal = closeModal.closest('.game-modal');
+        modal.classList.remove('active');
+    });
+});
