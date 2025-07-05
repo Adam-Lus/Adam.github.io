@@ -92,6 +92,7 @@
 
     <!-- 问答游戏模态框（添加完整内容） -->
     <div id="game-modal" class="game-modal hidden">
+      <span class="close-modal" onclick="closeGame()">&times;</span>
       <!-- 新增显示提示信息的元素 -->
       <div id="game-message" class="game-message"></div>
       <div class="game-modal-content">
@@ -105,6 +106,7 @@
 
     <!-- 猜数字游戏模态框 -->
     <div id="guess-game-modal" class="game-modal hidden">
+      <span class="close-modal" onclick="closeGuessGame()">&times;</span>
       <div class="game-modal-content">
         <h4 class="game-question">我心里想了一个1 - 100的数字，猜猜看是多少？</h4>
         <input type="number" id="guess-input" min="1" max="100" placeholder="输入你的猜测">
@@ -115,6 +117,7 @@
 
     <!-- 拼图游戏模态框 -->
     <div id="puzzle-modal" class="game-modal hidden">
+      <span class="close-modal" onclick="closePuzzleGame()">&times;</span>
       <div class="game-modal-content">
         <h4 class="game-question">拼图游戏</h4>
         <div class="puzzle-container" id="puzzle-container"></div>
