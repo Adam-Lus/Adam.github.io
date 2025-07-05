@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <!-- 添加音频元素 -->
-  <audio id="bgm" src="audio/郭顶 - 我们俩.mp3" autoplay loop></audio>
+  <!-- 添加音频元素 -->
+  <audio id="bgm" autoplay loop></audio>
   <button id="bgm-toggle">播放/暂停音乐</button>
   <!-- 导航栏 -->
   <header>
@@ -27,23 +27,23 @@
       </div>
     </nav>
   </header>
-  
 
   <!-- 主内容区 -->
   <main>
- <!-- 英雄区域 -->
+    <!-- 英雄区域 -->
     <section id="home" class="hero">
       <div class="container">
         <!-- 新增音乐控制和选择区域 -->
         <div class="music-control">
           <button id="bgm-toggle"><i class="fa fa-music"></i></button>
           <select id="music-select">
-            <option value="audio/郭顶 - 我们俩.mp3">郭顶 - 我们俩</option>
+            <!-- 替换为123云盘分享链接 -->
+            <option value="https://59-64-118-169.pd1.cjjd19.com:30443/download-cdn.123295.com/123-493/45ee3e9a/1845377446-0/45ee3e9a52bdd4b34305c7e7b3231ded/c-m66?v=5&t=1751802136&s=175180213634b77a2749303b1cc4be898cee769e85&r=Q4TSTR&bzc=2&bzs=313835303537363530303a31313533333432333a32313437323537343a31383530353736353030&bzp=0&bi=2057207594&filename=%E9%83%AD%E9%A1%B6+-+%E6%88%91%E4%BB%AC%E4%BF%A9.mp3&x-mf-biz-cid=cf9ef73f-bfb9-4aac-9222-1207338d716a-c4937c&auto_redirect=0&cache_type=1&ndcp=1&xmfcid=a75b57c7-411b-4931-a51a-db29831afa71444f0fa81e9">我们俩</option>
+            <option value="https://59-64-118-174.pd1.cjjd19.com:30443/download-cdn.123295.com/123-72/3247e7c9/1850576500-0/3247e7c9bb8f85e72a5919838bf88848/c-m12?v=5&t=1751802004&s=1751802004b8cffeea877496642d3ea3170c63ba7d&r=89WHZO&bzc=2&bzs=313835303537363530303a31313533333432353a39313031333630333a31383530353736353030&bzp=0&bi=2057207594&filename=%E6%97%AD%E6%97%AD%E6%97%AD+-+%E7%8B%82%E6%81%8B%E4%BD%A0.mp3&x-mf-biz-cid=42ff96b4-9a34-4d6d-b3e2-4bd3c235593b-3dab77&auto_redirect=0&cache_type=1&ndcp=1&xmfcid=f87b3a21-75d4-4a20-b800-80b416b1e687464f0fa81e9">狂恋你</option>
+            <option value="https://59-64-118-172.pd1.cjjd19.com:30443/download-cdn.123295.com/123-930/0411146e/1850576500-0/0411146e65e7b3f82fd6bd5a5ba31ba2/c-m86?v=5&t=1751802203&s=175180220356267c6618bd347814205d8416f3561c&r=A12RLF&bzc=2&bzs=313835303537363530303a31313533333432363a31353437323037303a30&bzp=0&bi=2057207594&filename=%E5%BC%A0%E6%9D%B0+-+%E4%BA%91%E4%B8%AD%E7%9A%84Angel.mp3&x-mf-biz-cid=8b1f3a0d-717e-4633-9ec8-8d05b99ace3a-c4937c&auto_redirect=0&cache_type=1&ndcp=1&xmfcid=71d4ff67-bc03-4ebe-9036-7cb2b5140edb464f0fa81e9">云中的Angle</option>
+            <option value="https://59-64-118-172.pd1.cjjd19.com:30443/download-cdn.123295.com/123-725/2b00c3d7/1850576500-0/2b00c3d7a440a9acc5ca9181c32d2ed5/c-m90?v=5&t=1751802267&s=175180226759cd16ba91a067c89605f799482721ab&r=39FYLU&bzc=2&bzs=313835303537363530303a31313533333432373a32383239393336333a30&bzp=0&bi=2057207594&filename=Cash+Cash%E3%80%81Sofia+Reyes+-+How+to+Love+(feat.+Sofia+Reyes).mp3&x-mf-biz-cid=f8dbc094-4a32-43aa-9ee1-47cbd2e205cd-c4937c&auto_redirect=0&cache_type=1&ndcp=1&xmfcid=1e8a33e4-7acc-4a06-a811-c7b907ece614464f0fa81e9">Cash Cash、Sofia Reyes - How to Love (feat. Sofia Reyes)</option>
+            <option value="https://59-64-118-172.pd1.cjjd19.com:30443/download-cdn.123295.com/123-859/7480a28d/1834350259-0/7480a28d8dea772c40119cfc9be13f5b/c-m80?v=5&t=1751802349&s=1751802349749f4e56cc00be6939bafac7e0bc48e5&r=LLWS7G&bzc=2&bzs=313835303537363530303a31313533333432383a33313831353538343a30&bzp=0&bi=2057207594&filename=%E9%98%BF%E8%82%86+-+%E5%96%9C%E6%AC%A2.mp3&x-mf-biz-cid=d2912655-7ddf-4419-9c68-bfb7dc7c85ff-c4937c&auto_redirect=0&cache_type=1&ndcp=1&xmfcid=aa50b025-640c-43ef-9749-8a6edce24c21444f0fa81e9">喜欢</option>
             <!-- 可以添加更多音乐选项 -->
-            <option value="audio/Cash Cash、Sofia Reyes - How to Love (feat. Sofia Reyes).mp3">Cash Cash、Sofia Reyes - How to Love (feat. Sofia Reyes)</option>
-            <option value="audio/阿肆 - 喜欢.mp3">阿肆 - 喜欢</option>
-            <option value="audio/旭旭旭 - 狂恋你.mp3">旭旭旭 - 狂恋你</option>
-            <option value="audio/张杰 - 云中的Angel.mp3">张杰 - 云中的Angel</option>
           </select>
         </div>
         <h1>欢迎来到我的的网站</h1>
@@ -52,85 +52,82 @@
       </div>
     </section>
 
-<!-- 功能展示区 -->
-<section id="features" class="features">
-  <div class="container">
-    <h2>网站功能</h2>
-    <div class="feature-cards game-grid">
-      <!-- 问答游戏卡片 -->
-      <div class="feature-card game-feature-card">
-        <i class="fa fa-gamepad"></i>
-        <h3>问答</h3>
-        <p>给宝贝做的小游戏</p>
-        <button id="start-game-btn" class="game-btn mt-4">
-          开始游戏 <i class="fa fa-arrow-right ml-2"></i>
-        </button>
-      </div>
-      
-      <!-- 猜数字游戏卡片 -->
-      <div class="feature-card game-feature-card">
-        <i class="fa fa-question-circle"></i>
-        <h3>猜数字</h3>
-        <p>猜猜我心里想的数字</p>
-        <button id="start-guess-game-btn" class="game-btn mt-4">
-          开始游戏 <i class="fa fa-arrow-right ml-2"></i>
-        </button>
-      </div>
-      
-      <!-- 拼图游戏卡片 -->
-     <!-- 拼图游戏卡片 -->
-        <div class="feature-card game-feature-card">
-          <i class="fa fa-puzzle-piece"></i>
-          <h3>拼图游戏</h3>
-          <p>锻炼宝贝的动手能力</p>
-          <button id="start-puzzle-btn" class="game-btn mt-4">
-            开始游戏 <i class="fa fa-arrow-right ml-2"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
+    <!-- 功能展示区 -->
+    <section id="features" class="features">
+      <div class="container">
+        <h2>网站功能</h2>
+        <div class="feature-cards game-grid">
+          <!-- 问答游戏卡片 -->
+          <div class="feature-card game-feature-card">
+            <i class="fa fa-gamepad"></i>
+            <h3>问答</h3>
+            <p>给宝贝做的小游戏</p>
+            <button id="start-game-btn" class="game-btn mt-4">
+              开始游戏 <i class="fa fa-arrow-right ml-2"></i>
+            </button>
+          </div>
 
-</section>
+          <!-- 猜数字游戏卡片 -->
+          <div class="feature-card game-feature-card">
+            <i class="fa fa-question-circle"></i>
+            <h3>猜数字</h3>
+            <p>猜猜我心里想的数字</p>
+            <button id="start-guess-game-btn" class="game-btn mt-4">
+              开始游戏 <i class="fa fa-arrow-right ml-2"></i>
+            </button>
+          </div>
 
-</section>
-      <!-- 问答游戏模态框（添加完整内容） -->
-      <div id="game-modal" class="game-modal hidden">
-        <!-- 新增显示提示信息的元素 -->
-        <div id="game-message" class="game-message"></div>
-        <div class="game-modal-content">
-          <h4 class="game-question text-3xl font-bold mb-8 text-gray-800">喜欢我吗？</h4>
-          <div class="game-options flex justify-center space-x-6">
-            <button id="like-btn" class="option-btn like-btn">喜欢</button>
-            <button id="dislike-btn" class="option-btn dislike-btn">不喜欢</button>
+          <!-- 拼图游戏卡片 -->
+          <div class="feature-card game-feature-card">
+            <i class="fa fa-puzzle-piece"></i>
+            <h3>拼图游戏</h3>
+            <p>锻炼宝贝的动手能力</p>
+            <button id="start-puzzle-btn" class="game-btn mt-4">
+              开始游戏 <i class="fa fa-arrow-right ml-2"></i>
+            </button>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- 猜数字游戏模态框 -->
-      <div id="guess-game-modal" class="game-modal hidden">
-        <div class="game-modal-content">
-          <h4 class="game-question">我心里想了一个1 - 100的数字，猜猜看是多少？</h4>
-          <input type="number" id="guess-input" min="1" max="100" placeholder="输入你的猜测">
-          <button id="guess-submit-btn" class="option-btn like-btn">提交</button>
-          <p id="guess-result"></p>
+    <!-- 问答游戏模态框（添加完整内容） -->
+    <div id="game-modal" class="game-modal hidden">
+      <!-- 新增显示提示信息的元素 -->
+      <div id="game-message" class="game-message"></div>
+      <div class="game-modal-content">
+        <h4 class="game-question text-3xl font-bold mb-8 text-gray-800">喜欢我吗？</h4>
+        <div class="game-options flex justify-center space-x-6">
+          <button id="like-btn" class="option-btn like-btn">喜欢</button>
+          <button id="dislike-btn" class="option-btn dislike-btn">不喜欢</button>
         </div>
       </div>
-<!-- 拼图游戏模态框 -->
-<div id="puzzle-modal" class="game-modal hidden">
-  <div class="game-modal-content">
-    <h4 class="game-question">拼图游戏</h4>
-    <div class="puzzle-container" id="puzzle-container"></div>
-    <div class="puzzle-controls">
-      <span id="moves">移动次数: 0</span>
-      <button id="reset-puzzle" class="option-btn like-btn">重新开始</button>
-      <button id="auto-solve-puzzle" class="option-btn like-btn">自动复原</button>
     </div>
-  </div>
-</div>
-      <!-- 玫瑰花容器 -->
-      <div id="rose-container" class="fixed inset-0 pointer-events-none z-40 hidden"></div>
-    </section>
+
+    <!-- 猜数字游戏模态框 -->
+    <div id="guess-game-modal" class="game-modal hidden">
+      <div class="game-modal-content">
+        <h4 class="game-question">我心里想了一个1 - 100的数字，猜猜看是多少？</h4>
+        <input type="number" id="guess-input" min="1" max="100" placeholder="输入你的猜测">
+        <button id="guess-submit-btn" class="option-btn like-btn">提交</button>
+        <p id="guess-result"></p>
+      </div>
+    </div>
+
+    <!-- 拼图游戏模态框 -->
+    <div id="puzzle-modal" class="game-modal hidden">
+      <div class="game-modal-content">
+        <h4 class="game-question">拼图游戏</h4>
+        <div class="puzzle-container" id="puzzle-container"></div>
+        <div class="puzzle-controls">
+          <span id="moves">移动次数: 0</span>
+          <button id="reset-puzzle" class="option-btn like-btn">重新开始</button>
+          <button id="auto-solve-puzzle" class="option-btn like-btn">自动复原</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 玫瑰花容器 -->
+    <div id="rose-container" class="fixed inset-0 pointer-events-none z-40 hidden"></div>
 
     <!-- 联系表单 -->
     <section id="contact" class="contact">
