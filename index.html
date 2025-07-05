@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   <!-- 添加音频元素 -->
+  <audio id="bgm" src="audio/郭顶 - 我们俩.mp3" autoplay loop></audio>
+  <button id="bgm-toggle">播放/暂停音乐</button>
   <!-- 导航栏 -->
   <header>
     <nav>
@@ -28,41 +31,69 @@
 
   <!-- 主内容区 -->
   <main>
-    <!-- 英雄区域 -->
+ <!-- 英雄区域 -->
     <section id="home" class="hero">
       <div class="container">
+        <!-- 新增音乐控制和选择区域 -->
+        <div class="music-control">
+          <button id="bgm-toggle"><i class="fa fa-music"></i></button>
+          <select id="music-select">
+            <option value="audio/郭顶 - 我们俩.mp3">郭顶 - 我们俩</option>
+            <!-- 可以添加更多音乐选项 -->
+            <option value="audio/Cash Cash、Sofia Reyes - How to Love (feat. Sofia Reyes).mp3">Cash Cash、Sofia Reyes - How to Love (feat. Sofia Reyes)</option>
+            <option value="audio/阿肆 - 喜欢.mp3">阿肆 - 喜欢</option>
+            <option value="audio/旭旭旭 - 狂恋你.mp3">旭旭旭 - 狂恋你</option>
+            <option value="audio/张杰 - 云中的Angel.mp3">张杰 - 云中的Angel</option>
+          </select>
+        </div>
         <h1>欢迎来到我的的网站</h1>
         <p>这是一个专门为了我的宝贝制作的网站</p>
         <a href="#features" class="btn">了解更多</a>
       </div>
     </section>
 
-    <!-- 功能展示区（修复嵌套错误） -->
-    <section id="features" class="features">
-      <div class="container">
-        <h2>网站功能</h2>
-        <div class="feature-cards">
-          <!-- 游戏功能卡片 -->
-          <div class="feature-card game-feature-card">
-            <i class="fa fa-gamepad"></i>
-            <h3>问答</h3>
-            <p>给宝贝做的小游戏</p>
-            <button id="start-game-btn" class="game-btn mt-4">
-              开始游戏 <i class="fa fa-arrow-right ml-2"></i>
-            </button>
-          </div>
-          <!-- 猜数字游戏卡片 -->
-          <div class="feature-card game-feature-card">
-            <i class="fa fa-question-circle"></i>
-            <h3>猜数字</h3>
-            <p>猜猜我心里想的数字</p>
-            <button id="start-guess-game-btn" class="game-btn mt-4">
-              开始游戏 <i class="fa fa-arrow-right ml-2"></i>
-            </button>
-          </div>
+<!-- 功能展示区 -->
+<section id="features" class="features">
+  <div class="container">
+    <h2>网站功能</h2>
+    <div class="feature-cards game-grid">
+      <!-- 问答游戏卡片 -->
+      <div class="feature-card game-feature-card">
+        <i class="fa fa-gamepad"></i>
+        <h3>问答</h3>
+        <p>给宝贝做的小游戏</p>
+        <button id="start-game-btn" class="game-btn mt-4">
+          开始游戏 <i class="fa fa-arrow-right ml-2"></i>
+        </button>
+      </div>
+      
+      <!-- 猜数字游戏卡片 -->
+      <div class="feature-card game-feature-card">
+        <i class="fa fa-question-circle"></i>
+        <h3>猜数字</h3>
+        <p>猜猜我心里想的数字</p>
+        <button id="start-guess-game-btn" class="game-btn mt-4">
+          开始游戏 <i class="fa fa-arrow-right ml-2"></i>
+        </button>
+      </div>
+      
+      <!-- 拼图游戏卡片 -->
+     <!-- 拼图游戏卡片 -->
+        <div class="feature-card game-feature-card">
+          <i class="fa fa-puzzle-piece"></i>
+          <h3>拼图游戏</h3>
+          <p>锻炼宝贝的动手能力</p>
+          <button id="start-puzzle-btn" class="game-btn mt-4">
+            开始游戏 <i class="fa fa-arrow-right ml-2"></i>
+          </button>
         </div>
       </div>
+    </div>
+  </section>
 
+</section>
+
+</section>
       <!-- 问答游戏模态框（添加完整内容） -->
       <div id="game-modal" class="game-modal hidden">
         <!-- 新增显示提示信息的元素 -->
@@ -85,7 +116,18 @@
           <p id="guess-result"></p>
         </div>
       </div>
-
+<!-- 拼图游戏模态框 -->
+<div id="puzzle-modal" class="game-modal hidden">
+  <div class="game-modal-content">
+    <h4 class="game-question">拼图游戏</h4>
+    <div class="puzzle-container" id="puzzle-container"></div>
+    <div class="puzzle-controls">
+      <span id="moves">移动次数: 0</span>
+      <button id="reset-puzzle" class="option-btn like-btn">重新开始</button>
+      <button id="auto-solve-puzzle" class="option-btn like-btn">自动复原</button>
+    </div>
+  </div>
+</div>
       <!-- 玫瑰花容器 -->
       <div id="rose-container" class="fixed inset-0 pointer-events-none z-40 hidden"></div>
     </section>
@@ -95,8 +137,6 @@
       <div class="container">
         <h2>宝贝想要什么功能联系我</h2>
         <form>
-          <input type="text" placeholder="宝贝的名字">
-          <input type="email" placeholder="宝贝的邮箱">
           <textarea placeholder="宝贝的留言"></textarea>
           <button type="submit">发送</button>
         </form>
